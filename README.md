@@ -22,6 +22,4 @@
 - **HTML5 / CSS3**
 
 ## Запуск проєкту
-```bash
-npm install
-npm run dev
+https://my-todo-list-5wyj.onrender.com/
