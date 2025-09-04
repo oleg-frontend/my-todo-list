@@ -1,35 +1,27 @@
-# todo-app
+# 📝 My To-Do List
 
-This template should help get you started developing with Vue 3 in Vite.
+Простий і зручний додаток для управління завданнями, створений на **Vue.js 3**.  
+Додаток дозволяє легко додавати нові завдання, відмічати виконані ✅ та видаляти непотрібні ❌.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Функціонал
+- ➕ Додавання нових завдань  
+- ✅ Позначення завдань як виконаних (виконані автоматично переміщуються вниз списку)  
+- ❌ Видалення завдань  
+- ↕️ Перетягування завдань мишею (drag & drop) для зміни порядку  
+- ✨ Ефекти при наведенні (hover states) для кращої взаємодії  
+- 💾 Збереження списку завдань у пам’яті браузера (localStorage)
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## 🛠️ Використані технології
+- **Vue.js 3 (Composition API)**  
+- **JavaScript (ES6+)**  
+- **HTML5 / CSS3**
 
-```sh
+## Запуск проєкту
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
