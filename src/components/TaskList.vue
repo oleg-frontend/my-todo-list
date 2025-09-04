@@ -1,23 +1,33 @@
 <template>
-  <draggable
-    v-model="localTasks"
-    item-key="id"
-    animation="200"
-    ghost-class="drag-ghost"
-    @end="updateTasks"
-  >
-    <template #item="{ element }">
-      <li :key="element.id">
-        <TaskItem
-          :task="element"
-          @delete-task="$emit('delete-task', element.id)"
-          @toggle-task="$emit('toggle-task', element.id)"
-          @edit-task="$emit('edit-task', { taskId: element.id, newText: $event })"
-        />
-      </li>
-    </template>
-  </draggable>
+  <div>
+    <!-- Повідомлення, якщо завдань немає -->
+    <p v-if="localTasks.length === 0" class="no-tasks">
+      Немає завдань 😄
+    </p>
+
+    <!-- Список завдань draggable -->
+    <draggable
+      v-else
+      v-model="localTasks"
+      item-key="id"
+      animation="200"
+      ghost-class="drag-ghost"
+      @end="updateTasks"
+    >
+      <template #item="{ element }">
+        <li :key="element.id">
+          <TaskItem
+            :task="element"
+            @delete-task="$emit('delete-task', element.id)"
+            @toggle-task="$emit('toggle-task', element.id)"
+            @edit-task="$emit('edit-task', { taskId: element.id, newText: $event })"
+          />
+        </li>
+      </template>
+    </draggable>
+  </div>
 </template>
+
 
 <script>
 import TaskItem from "./TaskItem.vue";
